@@ -1,0 +1,30 @@
+//selection sort
+#include <stdio.h>
+void main() {
+    int i,a[100],min,n,j,temp;
+    printf("write the number of elements ");
+    scanf("%d",&n);
+    printf("write elements");
+    for (i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+ 
+    for(i=0;i<n;i++)
+    {
+           min=i;
+        for(j=i+1;j<n;j++)
+        {
+            if(a[min]>a[j])
+            {
+                min=j;
+            }
+        }
+    temp=a[min];
+    a[min]=a[i];
+    a[i]=temp;
+    }
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+} 
